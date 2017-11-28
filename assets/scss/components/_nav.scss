@@ -1,0 +1,213 @@
+.menu {
+	display: flex;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	position: fixed;
+	z-index: 70;
+	height: 100vh;
+	width: 100vw;
+	background: #fff;
+	@include transition();
+	align-items: center;
+	justify-content: center;
+	
+	a {
+		display: block;
+		text-align: center;
+		font-size: 2.5rem;
+	}
+}
+
+.menu.is--open {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+
+.menu__trigger {
+	position: fixed;
+	z-index: 80;
+	top: 0;
+	right: 0;
+	padding: 2rem;
+	display: none;
+	cursor: pointer;
+	
+	span {
+		display: block;
+		background: $c-primary;
+		height: 3px;
+		width: 30px;
+		margin-bottom: 5px;
+		@include transition();
+	}
+	
+	@include mq(m) {
+		display: block;
+	}
+}
+
+.menu__trigger.is--open {
+	
+	span {
+		
+		&:first-of-type {
+			transform: translateY(7px) rotate(45deg);
+		}
+		
+		&:nth-of-type(2) {
+			opacity: 0;
+		}
+		
+		&:last-of-type {
+			transform: translateY(-10px) rotate(-45deg);
+		}
+	}
+}
+
+.nav {
+	position: absolute;
+	width: 100%;
+	z-index: 50;
+	background: transparent;
+	
+	&__content {
+		@include row();
+		align-items: center;
+	}
+	
+	&__brand {
+		display: block;
+		width: 150px;
+		
+		@include mq(m) {
+			padding-top: .5rem;
+		}
+		
+		img {
+			width: 100%;
+		}
+	}
+	
+	&__items {
+		padding-top: 1rem;
+		@include flex-right();
+	} 
+	
+	&__contact {
+		color: $c-white;
+		font-weight: bold;
+		font-size: .8rem;
+		
+		@media screen and(max-width: 1400px) {
+			display: none;
+		}
+		
+		li {
+			display: inline-block;
+			position: relative;
+			
+			&:first-of-type {
+				
+				&:after {
+					display: none;
+				}
+				
+				&:before {
+					content: '\f041';
+					font-family: fontawesome;
+					color: $c-primary;
+					margin-right: .5rem;
+				}
+			}
+			
+			&:last-of-type {
+				
+				&:before {
+					content: '\f095';
+					font-family: fontawesome;
+					color: $c-primary;
+					margin-right: .5rem;
+				}
+			}
+		}
+	}
+	
+	&__navbar {
+		display: flex;
+		@include flex-right();
+		
+		@include mq(m) {
+			display: none;
+		}
+	}
+	
+	li {
+		position: relative;
+		margin: .3rem;
+		
+		&:after {
+			content: '';
+			height: 3px;
+			width: 100%;
+			background: $c-primary;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transform: scaleY(0);
+			@include transition($t: 400ms);
+		}
+		
+		&:hover {
+			
+			&:after {
+				transform: scaleY(1);
+			}
+		}
+		
+		a {
+			display: block;
+			color: $c-white;
+			padding: 1rem 1rem;
+			font-weight: bold;
+			@include transition($e: $easeInOutCubic);
+			
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.nav.offpage {
+	position: relative;
+	
+	li {
+		color: $c-font;
+	}
+	
+	a {
+		color: $c-font;
+		
+		&:hover {
+			color: $c-font;
+		}
+	}
+}
+
+.nav__scrolled {
+	position: fixed;
+	transform: translateY(-100%);
+	padding: .5rem 0;
+	background: rgba($c-darker, .9);
+	@include transition();
+	
+	.nav__content {
+		@include row(1300px);
+	}
+}
+
+.nav__scrolled.is--scrolled {
+	transform: translateY(0);
+}

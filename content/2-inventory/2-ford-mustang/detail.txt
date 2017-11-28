@@ -1,0 +1,49 @@
+Title: 2014 Ford Mustang
+
+----
+
+Make: Ford
+
+----
+
+Model: Mustang
+
+----
+
+Text: There, now he's trapped in a book I wrote: a crummy world of plot holes and spelling errors! Yes, except the Dave Matthews Band doesn't rock.
+
+----
+
+Price: $25,900
+
+----
+
+Year: 2014
+
+----
+
+Kilos: 18,000
+
+----
+
+Transmition: Manual
+
+----
+
+Colour: Silver
+
+----
+
+Type: Coupe
+
+----
+
+Tags: car
+
+----
+
+Date: 2016-10-06
+
+----
+
+Condition: Used

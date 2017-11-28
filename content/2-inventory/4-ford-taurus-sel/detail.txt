@@ -1,0 +1,49 @@
+Title: 2013 Ford Taurus SEL
+
+----
+
+Make: Ford
+
+----
+
+Model: Taurus SEL
+
+----
+
+Text: There, now he's trapped in a book I wrote: a crummy world of plot holes and spelling errors! Yes, except the Dave Matthews Band doesn't rock.
+
+----
+
+Condition: Used
+
+----
+
+Price: 12,825
+
+----
+
+Year: 2013
+
+----
+
+Kilos: 50,000
+
+----
+
+Transmition: Auto
+
+----
+
+Colour: Red
+
+----
+
+Type: Sedan
+
+----
+
+Tags: truck
+
+----
+
+Date: 2016-10-06

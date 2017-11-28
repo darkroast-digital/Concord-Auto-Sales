@@ -1,0 +1,5 @@
+Title: Default
+
+----
+
+Text: This is the default page.

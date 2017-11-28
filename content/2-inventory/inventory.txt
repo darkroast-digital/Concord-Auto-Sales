@@ -1,0 +1,5 @@
+Title: Inventory
+
+----
+
+Text: lorem ipsum dolor sit amet

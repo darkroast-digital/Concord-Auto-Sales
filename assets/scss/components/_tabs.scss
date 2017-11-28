@@ -1,0 +1,100 @@
+.products {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: $section;
+	
+	.button {
+		@include button(full, $c-light);
+		display: inline-block;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.tabs__nav {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	margin-bottom: 130px;
+	
+	@include mq(m) {
+		display: none;
+		margin-bottom: 0;
+	}
+	
+	li {
+		padding: .5rem 1rem;
+		cursor: pointer;
+		position: relative;
+		width: size(1/4);
+		
+		img {
+			max-width: 100%;
+			width: 380px;
+		}
+	}
+}
+
+.tabs__container {
+	padding: 1rem;
+	
+	h6 {
+		display: inline-block;
+		text-align: center;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-bottom: 3rem;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -1rem;
+			height: 100%;
+			width: 5px;
+			background: $c-primary;
+		}
+		
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -1rem;
+			height: 100%;
+			width: 5px;
+			background: $c-primary;
+		}
+	}
+	
+	.tab__drawer {
+		display: none;
+		cursor: pointer;
+		background: $c-lighter;
+		padding: 1rem 2rem;
+		font-family: $font-two;
+		font-weight: bold;
+		@include type(font-size, 30rem, 75rem, 0.889rem, 1rem);
+		@include transition();
+		margin: 0;
+		
+		&:before {
+			display: none;
+		}
+		
+		&:after {
+			display: none;
+		}
+
+		&.active {
+			background: $c-white;
+		}
+
+		@include mq(m) {
+			display: block;
+		}	
+	}
+}
+
+

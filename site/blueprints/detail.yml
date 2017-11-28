@@ -1,0 +1,62 @@
+title: Inventory
+pages: true
+files:
+	sortable: true
+fields:
+	title:
+		label: Title
+		type: text
+	make:
+		label: Make
+		type: text
+	model:
+		label: Model
+		type: text
+	text:
+		label: Description
+		type: markdown
+	condition:
+		label: Condition
+		type: text
+	price:
+		label: Price
+		type: text
+	year:
+		label: Year
+		type: text
+	kilos:
+		label: Kilometres
+		type: text
+	transmition:
+		label: Transmission
+		type: text
+	engine:
+		label: Engine
+		type: text
+	drivetrain:
+		label: Drivetrain
+		type: text
+	fuel:
+		label: Fuel Type
+		type: text
+	colour:
+		label: Colour
+		type: text
+	interior:
+		label: Interior Colour
+		type: text
+	style:
+		label: Style/ Trim
+		type: text
+	type:
+		label: Type
+		type: text 
+	tags:
+		label: Tags
+		type: tags
+	date:
+		label: Date Posted
+		type: date
+		format: MM/DD/YYY
+		default: today
+		override: true

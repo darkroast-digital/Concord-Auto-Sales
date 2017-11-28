@@ -1,0 +1,110 @@
+.hero {
+	background: $c-primary;
+	background-image: url('/assets/img/hero.jpg'); 
+	@include cover();
+	@include hw();
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	
+	&__car {
+		height: 70%;
+		position: absolute;
+		bottom: -5%;
+		right: 0;
+		
+		@include mq(m) {
+			height: 70%;
+			right: -30%;
+		}
+		
+		@include mq(s) {
+			display: none;
+		}
+	}
+	
+	&__content {
+		position: relative;
+		z-index: 10;
+		max-width: 1200px;
+		width: 1200px;
+		margin-top: -5rem;
+		
+		@include mq(m) {
+			margin-top: 0;
+			padding: 0 1rem;
+		}
+		
+		h1,
+		h6 {
+			text-transform: uppercase;
+			color: #fff;
+			margin-bottom: 0;
+			text-shadow: 2px 2px 5px rgba($c-darker, .3);
+			
+			@include mq(m) {
+				text-align: center;
+			}
+		}
+		
+		h1 {
+			line-height: 1.2;
+			margin-bottom: $vertical-rhythm * .5;
+			
+			@include mq(m) {
+				font-size: 2rem;
+			}
+		}
+		
+		h6 {
+			max-width: 40%;
+			margin-bottom: $vertical-rhythm;
+			position: relative;
+			padding-left: 15px;
+			
+			@include mq(m) {
+				margin: 0 auto;
+			}
+			
+			@include mq(s) {
+				max-width: 100%;  
+			}
+				
+			&:before {
+				content: '';
+				position: absolute; 
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 5px;
+				background: $c-secondary;
+				
+				@include mq(s) {
+					display: none;
+				}
+			}
+		}
+		
+		.button {
+			@include button(full, $bg: $c-white);
+			
+			@include mq(m) {
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%);
+				margin-top: $vertical-rhythm;
+			}
+		}
+	}
+}
+
+$ipad-pro-portrait-breakpoint: "(min-device-width : 1024px) and (max-device-width : 1024px) and (min-device-height : 1366px) and (max-device-height : 1366px) and (min-width: 1024px) and (max-width: 1024px)";
+$ipad-pro-landscape-breakpoint: "(min-device-width : 1024px) and (max-device-width : 1024px) and (min-device-height : 1366px) and (max-device-height : 1366px) and (min-width: 1366px) and (max-width: 1366px)";
+
+// Responsive Mixins
+
+
+.hero__car {
+	
+}
